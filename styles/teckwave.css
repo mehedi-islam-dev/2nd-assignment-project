@@ -458,10 +458,6 @@ img {
 .social-links a:hover {
     background: #00ff9d;
 }
-
-/* =========================================
-   8. FOOTER
-   ========================================= */
 .site-footer {
     position: relative; 
     padding: 80px 0 40px 0;
@@ -470,7 +466,6 @@ img {
     color: #fff;
 }
 
-/* Background Image Layer */
 .footer-bg-layer {
     position: absolute;
     top: 0;
@@ -541,4 +536,117 @@ img {
 .copyright {
     color: #666;
     font-size: 0.85rem;
+}
+@media (max-width: 992px) {
+    .hamburger-label {
+        display: block;
+        order: 3;
+        z-index: 1001;
+    }
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1A0B2E;
+        flex-direction: column;
+        padding: 30px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        z-index: 999;
+    }
+    .nav-item {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        gap: 20px;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+    .nav-btn {
+        margin: 0 auto;
+    }
+    #nav-toggle:checked ~ .main-nav {
+        display: flex;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .stat-item {
+        flex: 1 1 45%;
+        margin-bottom: 20px;
+    }
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-tall, .second-card, .third-card, .forth-card, .fifth-card {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .episodes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .mic-circle-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .hero-wave-bg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    }
+
+    .stat-item {
+        flex: 2 50%;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .card-tall {
+        grid-row: auto;
+    }
+    .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+    .host-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .host-img-wrapper {
+        margin: 0 auto;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 70%;
+        gap: 20px;
+    }
+    
+    .logo {
+        font-size: 2.5rem;
+    }
 }
