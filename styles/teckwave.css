@@ -458,3 +458,87 @@ img {
 .social-links a:hover {
     background: #00ff9d;
 }
+
+/* =========================================
+   8. FOOTER
+   ========================================= */
+.site-footer {
+    position: relative; 
+    padding: 80px 0 40px 0;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Background Image Layer */
+.footer-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+.footer-bg-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.4;
+}
+
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.logo {
+    font-size: 3rem;
+    font-weight: 900;
+}
+.logo-gradient {
+    background: linear-gradient(90deg, #ff00cc, #9933ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+}
+
+.copyright {
+    color: #666;
+    font-size: 0.85rem;
+}
